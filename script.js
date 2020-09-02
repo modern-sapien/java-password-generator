@@ -9,6 +9,10 @@ function writePassword() {
   passwordText.value = password;
 
 }
+function generatePassword() {
+  //TODO generate a real password & replace return string with real password string
+  return "This is not my final password!"
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
