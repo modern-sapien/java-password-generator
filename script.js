@@ -9,10 +9,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function generatePassword() {
-  //TODO generate a real password & replace return string with real password string
-  return "This is not my final password!" //THIS goes below prompts for generating password
-}
+
 
   var userPassLength = prompt("Let's select a password length 8 characters to 128")
   var userPassLowerCase = confirm("Do you need lowercase characters?");
@@ -36,47 +33,47 @@ function generatePassword() {
     // console.log(passCondition.passLowerCase);
     // console.log(generatedPassword = generatedPassword.concat(passCondition.passLowerCase));
  
-    if (userPassLength > 0) {
+     if (userPassLength > 0) {
     alert("You declared a length of" + userPassLength)
     } else {
     alert("You need to choose a character amount between 1 and 128")
     }
 
-  if (userPassLowerCase === true) {
-    //if userPassLowerCase confirmed, add lower case to generated Password
-    generatedPassword = generatedPassword.concat(passCondition.passLowerCase)
-    console.log(generatedPassword)
-    alert("You need lowercase characters")
-  } else {
-    alert("You don't need lower case letters");
-  }
+    if (userPassLowerCase === true) {
+      //if userPassLowerCase confirmed, add lower case to generated Password
+      generatedPassword = generatedPassword.concat(passCondition.passLowerCase)
+      console.log(generatedPassword)
+      alert("You need lowercase characters")
+    } else {
+      alert("You don't need lower case letters");
+    }
 
-  if (userPassUpperCase === true) { 
-    //if userPassUpperCase confirmed, add Uppercase to generatedPassword
-    generatedPassword = generatedPassword.concat(passCondition.passUpperCase)
-    console.log(generatedPassword)
-    alert("You need uppercase characters!")
-  } else {
-    alert("You don't need upper case letters");
-  }
+    if (userPassUpperCase === true) { 
+      //if userPassUpperCase confirmed, add Uppercase to generatedPassword
+      generatedPassword = generatedPassword.concat(passCondition.passUpperCase)
+      console.log(generatedPassword)
+      alert("You need uppercase characters!")
+    } else {
+      alert("You don't need upper case letters");
+    }
 
-  if (userPassNumeric === true) {
-    //if userPassNumeric confirmed, add numbers to generatedPassword
-    generatedPassword = generatedPassword.concat(passCondition.passNumber)
-    console.log(generatedPassword)
-    alert("You need numbers!")
-  } else {
-    alert("You don't need numbers");
-  }
+    if (userPassNumeric === true) {
+      //if userPassNumeric confirmed, add numbers to generatedPassword
+      generatedPassword = generatedPassword.concat(passCondition.passNumber)
+      console.log(generatedPassword)
+      alert("You need numbers!")
+    } else {
+      alert("You don't need numbers");
+    }
 
-  if (userPassSpecial === true) {
-     //if userPassNumeric confirmed, add numbers to generatedPassword
-     generatedPassword = generatedPassword.concat(passCondition.passSpecial)
-     console.log(generatedPassword)
-    alert("You need special characters!")
-  } else {
-    alert("You don't need special characters");
-  }
+    if (userPassSpecial === true) {
+      //if userPassNumeric confirmed, add numbers to generatedPassword
+      generatedPassword = generatedPassword.concat(passCondition.passSpecial)
+      console.log(generatedPassword)
+      alert("You need special characters!")
+    } else {
+      alert("You don't need special characters");
+    }
 
     var randomizedPassword = []; // <<< this is what will hold
     // password generated
@@ -87,8 +84,15 @@ function generatePassword() {
     Math.floor(Math.random()* generatedPassword.length)
     randomizedPassword.push(generatedPassword[[Math.floor(Math.random()* generatedPassword.length)]])
     console.log(randomizedPassword)
-    } 
+    randomizedPassString = randomizedPassword.toString() 
+    console.log(randomizedPassString)
+    }   
 
+  function generatePassword() {
+    return randomizedPassString
+    //TODO generate a real password & replace return string with real password string
+  // return "This is not my final password!" //THIS goes below prompts for generating password
+    }
 
 // at this point, we have established what a user would like to include in their
 //password, now we have to create it based on those outcomes & summon the variables
