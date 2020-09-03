@@ -22,7 +22,7 @@ function writePassword() {
         passLowerCase: "abcdefghijklmnopqrstuvwxyz", //possibly switch to array???
         passUpperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         passNumber: "1234567890",
-        passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
+        passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:~`"
         };
 
         
@@ -33,12 +33,12 @@ function writePassword() {
     // console.log(passCondition.passLowerCase);
     // console.log(generatedPassword = generatedPassword.concat(passCondition.passLowerCase));
  
-    if (userPassLength > 0) {
-    alert("You declared a length of " + userPassLength + "characters")
-    
-    } else {
-    alert("You need to choose a character amount between 8 and 128")
-    }
+    if (userPassLength > 8 && userPassLength < 129) {
+      alert("You declared a length of " + userPassLength + "characters")
+      
+      } else {
+      alert("You need to choose a character amount between 8 and 128")
+      }
 
     if (userPassLowerCase === true) {
       //if userPassLowerCase confirmed, add lower case to generated Password
@@ -106,7 +106,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 }
 else {
-    alert("Password generator will only work if the characters selected is a numeral between 8 & 128")
+    alert("Password generator will only work if the characters selected is equal numeral between 8 & 128")
     alert("Please refresh page to try again.")
     }
 
