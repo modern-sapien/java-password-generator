@@ -28,12 +28,13 @@ function generatePassword() {
         passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
         };
 
+  var generatedPassword = ""//this is where we will concat the strings together
+
   if (userPassLength > 0) {
     alert("You declared a length of" + userPassLength)
   } else {
     alert("You need to choose a character amount between 1 and 128")
-    //call userpass length until confirm is correct
-  }
+    }
 
   if (userPassLowerCase === true) {
     alert("You need lowercase characters")
