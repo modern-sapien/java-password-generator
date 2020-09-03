@@ -14,11 +14,11 @@ function generatePassword() {
   return "This is not my final password!" //THIS goes below prompts for generating password
 }
 
-  var userPassLength = prompt("Let's select a password length 8 characters to 128")
-  var userPassLowerCase = confirm("Do you need lowercase characters?");
-  var userPassUpperCase = confirm("Do you need uppercase characters?");
-  var userPassNumeric = confirm("Do you need numbers?")
-  var userPassSpecial =confirm("Do you need special characters?")
+  // var userPassLength = prompt("Let's select a password length 8 characters to 128")
+  // var userPassLowerCase = confirm("Do you need lowercase characters?");
+  // var userPassUpperCase = confirm("Do you need uppercase characters?");
+  // var userPassNumeric = confirm("Do you need numbers?")
+  // var userPassSpecial =confirm("Do you need special characters?")
 
 
   var passCondition = {      //create an object with multiple arrays that we will call on to generate a password depending on preferences
@@ -28,39 +28,43 @@ function generatePassword() {
         passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
         };
 
-  var generatedPassword = "a"//this is where we will concat the strings together
+        
+  var generatedPassword = "a";//this is where we will concat the strings together
 
-  if (userPassLength > 0) {
-    alert("You declared a length of" + userPassLength)
-  } else {
-    alert("You need to choose a character amount between 1 and 128")
-    }
+ console.log(passCondition.passUpperCase);
+ console.log(passCondition.passLowerCase);
+ console.log(generatedPassword = generatedPassword.concat(passCondition.passLowerCase));
+  // if (userPassLength > 0) {
+  //   alert("You declared a length of" + userPassLength)
+  // } else {
+  //   alert("You need to choose a character amount between 1 and 128")
+  //   }
 
-  if (userPassLowerCase === true) {
-    generatedPassword.concat(userPassLowerCase)
-    console.log(generatedPassword)
-    alert("You need lowercase characters")
-  } else {
-    alert("You don't need lower case letters");
-  }
+  // if (userPassLowerCase === true) {
+  //   // (generatedPassword + passCondition.userPassLowerCase);
+  //   console.log(generatedPassword)
+  //   alert("You need lowercase characters")
+  // } else {
+  //   alert("You don't need lower case letters");
+  // }
 
-  if (userPassUpperCase === true) {
-    alert("You need uppercase characters!")
-  } else {
-    alert("You don't need upper case letters");
-  }
+  // if (userPassUpperCase === true) {
+  //   alert("You need uppercase characters!")
+  // } else {
+  //   alert("You don't need upper case letters");
+  // }
 
-  if (userPassNumeric === true) {
-    alert("You need numbers!")
-  } else {
-    alert("You don't need numbers");
-  }
+  // if (userPassNumeric === true) {
+  //   alert("You need numbers!")
+  // } else {
+  //   alert("You don't need numbers");
+  // }
 
-  if (userPassSpecial === true) {
-    alert("You need special characters!")
-  } else {
-    alert("You don't need special characters");
-  }
+  // if (userPassSpecial === true) {
+  //   alert("You need special characters!")
+  // } else {
+  //   alert("You don't need special characters");
+  // }
 
 // at this point, we have established what a user would like to include in their
 //password, now we have to create it based on those outcomes & summon the variables
