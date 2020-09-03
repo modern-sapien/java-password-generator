@@ -1,7 +1,7 @@
 # java-password-generator
 
 Here is an image of the project
-![Password Generator Screenshot](homework\java-password-generator\passImage.png)
+![Password Generator Screenshot](homework/java-password-generator/passImage.png)
 ## Introduction
 
 For this project, I was tasked with creating a password generator in javascript that would enable a user through a series of prompts to create a unique randomly generated password.
