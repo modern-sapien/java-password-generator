@@ -28,7 +28,7 @@ function generatePassword() {
         passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
         };
 
-  var generatedPassword = ""//this is where we will concat the strings together
+  var generatedPassword = "a"//this is where we will concat the strings together
 
   if (userPassLength > 0) {
     alert("You declared a length of" + userPassLength)
@@ -37,6 +37,8 @@ function generatePassword() {
     }
 
   if (userPassLowerCase === true) {
+    generatedPassword.concat(userPassLowerCase)
+    console.log(generatedPassword)
     alert("You need lowercase characters")
   } else {
     alert("You don't need lower case letters");
