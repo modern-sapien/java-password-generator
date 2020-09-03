@@ -35,6 +35,7 @@ function writePassword() {
  
     if (userPassLength > 0) {
     alert("You declared a length of " + userPassLength + "characters")
+    
     } else {
     alert("You need to choose a character amount between 8 and 128")
     }
@@ -80,36 +81,34 @@ function writePassword() {
 
     // Need to loop & generate random characters from the loop into
     // new variable
+    if (userPassLength > 8 && userPassLength < 129) {
+      
     for (var i = 0; i < userPassLength; i++) {
     // Math.floor(Math.random()* generatedPassword.length)
     randomizedPassword.push(generatedPassword[[Math.floor(Math.random()* generatedPassword.length)]])
     console.log(randomizedPassword)
-    randomizedPassString = randomizedPassword.join("")  //gets items from randomizedPassword and puts them into a string
+    randomizedPassString = randomizedPassword.join("")  
+    //gets items from randomizedPassword and puts them into a string with , separating them from the previous array they were held in
     // console.log(randomizedPassString)
-    }   
+    // }else {
+    //     alert("Please put in a number of characters between 8 & 128")
+      }
+    
 
   function generatePassword() {
     return randomizedPassString;
-    //TODO generate a real password & replace return string with real password string
-  // return "This is not my final password!" //THIS goes below prompts for generating password
     }
 
-// at this point, we have established what a user would like to include in their
-//password, now we have to create it based on those outcomes & summon the variables
-// necessary to execute.
 
-//userPassLength = length of password generated 8 - 128 characters
-  // if userPassLowerCase === true ;include lower case chars
-  // if userPassUpperCase === true ; include upper case chars
-  // if userPassNumeric === true ; include number chars
-  // if userPassSpecial === true; include special chars
-  // for (var i; 0 < userPassLength; i++)
-  // to use CONCAT, RANDOMIZER, MATH.FLOOR, MATH.RANDOM
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
+}
+else {
+    alert("Password generator will only work if the characters selected is a numeral between 8 & 128")
+    alert("Please refresh page to try again.")
+    }
 
 
 // ACCEPTANCE GUIDELINES
@@ -123,8 +122,18 @@ generateBtn.addEventListener("click", writePassword);
 // [DONE] WHEN prompted for character types to include in the password
 // [DONE] THEN I choose lowercase, uppercase, numeric, and/or special characters
 // [DONE] WHEN I answer each prompt
-// [//]THEN my input should be validated and at least one character type should be selected
+// []THEN my input should be validated and at least one character type should be selected
 // [DONE] WHEN all prompts are answered
-// [] THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
+// [DONE] THEN a password is generated that matches the selected criteria
+// [DONE] WHEN the password is generated
+// [DONE] THEN the password is either displayed in an alert or written to the page
+ 
+
+
+//userPassLength = length of password generated 8 - 128 characters
+  // if userPassLowerCase === true ;include lower case chars
+  // if userPassUpperCase === true ; include upper case chars
+  // if userPassNumeric === true ; include number chars
+  // if userPassSpecial === true; include special chars
+  // for (var i; 0 < userPassLength; i++)
+  // to use CONCAT, RANDOMIZER, MATH.FLOOR, MATH.RANDOM
