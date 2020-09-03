@@ -84,12 +84,12 @@ function writePassword() {
     Math.floor(Math.random()* generatedPassword.length)
     randomizedPassword.push(generatedPassword[[Math.floor(Math.random()* generatedPassword.length)]])
     console.log(randomizedPassword)
-    // randomizedPassString = randomizedPassword.toString() 
+    randomizedPassString = randomizedPassword.join("") 
     // console.log(randomizedPassString)
     }   
 
   function generatePassword() {
-    return randomizedPassword;
+    return randomizedPassString;
     //TODO generate a real password & replace return string with real password string
   // return "This is not my final password!" //THIS goes below prompts for generating password
     }
