@@ -36,18 +36,27 @@ function generatePassword() {
 
   if (userPassLowerCase === true) {
     alert("You need lowercase characters")
+  } else {
+    alert("You don't need lower case letters");
   }
 
   if (userPassUpperCase === true) {
     alert("You need uppercase characters!")
+  } else {
+    alert("You don't need upper case letters");
   }
+
 
   if (userPassNumeric === true) {
     alert("You need numbers!")
+  } else {
+    alert("You don't need numbers");
   }
 
   if (userPassSpecial === true) {
     alert("You need special characters!")
+  } else {
+    alert("You don't need special characters");
   }
 
 
