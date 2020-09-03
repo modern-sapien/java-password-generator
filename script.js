@@ -20,11 +20,12 @@ function generatePassword() {
   var userPassNumeric = confirm("Do you need numbers?")
   var userPassSpecial =confirm("Do you need special characters?")
 
+
   var passCondition = {      //create an object with multiple arrays that we will call on to generate a password depending on preferences
-        passLowerCase: ["a", "b", "c", "d", "e", "f"],
-        passUpperCase: ["A", "B", "C", "D", "E", "F"],
-        passNumber: ["1", "2", "3", "4", "5", "6"],
-        passSpecial: ["!", "@", "#", "%", "^"]
+        passLowerCase: "abcdefghijklmnopqrstuvwxyz",
+        passUpperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        passNumber: "1234567890",
+        passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
         };
 
   if (userPassLength > 0) {
@@ -46,7 +47,6 @@ function generatePassword() {
     alert("You don't need upper case letters");
   }
 
-
   if (userPassNumeric === true) {
     alert("You need numbers!")
   } else {
@@ -59,6 +59,17 @@ function generatePassword() {
     alert("You don't need special characters");
   }
 
+// at this point, we have established what a user would like to include in their
+//password, now we have to create it based on those outcomes & summon the variables
+// necessary to execute.
+
+//userPassLength = length of password generated 8 - 128 characters
+  // if userPassLowerCase === true ;include lower case chars
+  // if userPassUpperCase === true ; include upper case chars
+  // if userPassNumeric === true ; include number chars
+  // if userPassSpecial === true; include special chars
+  // for (var i; 0 < userPassLength; i++)
+  // to use CONCAT, RANDOMIZER, MATH.FLOOR, MATH.RANDOM
 
 
 // Add event listener to generate button
