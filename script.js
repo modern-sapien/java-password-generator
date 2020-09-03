@@ -19,7 +19,7 @@ function writePassword() {
 
 
   var passCondition = {      //create an object with multiple arrays that we will call on to generate a password depending on preferences
-        passLowerCase: "abcdefghijklmnopqrstuvwxyz",
+        passLowerCase: "abcdefghijklmnopqrstuvwxyz", //possibly switch to array???
         passUpperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         passNumber: "1234567890",
         passSpecial: "!@#$%^&*()_+-=[]{}|?/<>,.:"
@@ -33,10 +33,10 @@ function writePassword() {
     // console.log(passCondition.passLowerCase);
     // console.log(generatedPassword = generatedPassword.concat(passCondition.passLowerCase));
  
-     if (userPassLength > 0) {
+    if (userPassLength > 0) {
     alert("You declared a length of" + userPassLength)
     } else {
-    alert("You need to choose a character amount between 1 and 128")
+    alert("You need to choose a character amount between 8 and 128")
     }
 
     if (userPassLowerCase === true) {
@@ -84,12 +84,12 @@ function writePassword() {
     Math.floor(Math.random()* generatedPassword.length)
     randomizedPassword.push(generatedPassword[[Math.floor(Math.random()* generatedPassword.length)]])
     console.log(randomizedPassword)
-    randomizedPassString = randomizedPassword.toString() 
-    console.log(randomizedPassString)
+    // randomizedPassString = randomizedPassword.toString() 
+    // console.log(randomizedPassString)
     }   
 
   function generatePassword() {
-    return randomizedPassString
+    return randomizedPassword;
     //TODO generate a real password & replace return string with real password string
   // return "This is not my final password!" //THIS goes below prompts for generating password
     }
@@ -122,9 +122,9 @@ generateBtn.addEventListener("click", writePassword);
 // [DONE] THEN I choose a length of at least 8 characters and no more than 128 characters
 // [DONE] WHEN prompted for character types to include in the password
 // [DONE] THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
+// [DONE] WHEN I answer each prompt
+// [//]THEN my input should be validated and at least one character type should be selected
+// [DONE] WHEN all prompts are answered
+// [] THEN a password is generated that matches the selected criteria
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
