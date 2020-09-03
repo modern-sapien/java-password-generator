@@ -34,7 +34,7 @@ function writePassword() {
     // console.log(generatedPassword = generatedPassword.concat(passCondition.passLowerCase));
  
     if (userPassLength > 0) {
-    alert("You declared a length of" + userPassLength)
+    alert("You declared a length of " + userPassLength + "characters")
     } else {
     alert("You need to choose a character amount between 8 and 128")
     }
@@ -43,7 +43,7 @@ function writePassword() {
       //if userPassLowerCase confirmed, add lower case to generated Password
       generatedPassword = generatedPassword.concat(passCondition.passLowerCase)
       console.log(generatedPassword)
-      alert("You need lowercase characters")
+      alert("Your password will contain lowercase characters")
     } else {
       alert("You don't need lower case letters");
     }
@@ -52,7 +52,7 @@ function writePassword() {
       //if userPassUpperCase confirmed, add Uppercase to generatedPassword
       generatedPassword = generatedPassword.concat(passCondition.passUpperCase)
       console.log(generatedPassword)
-      alert("You need uppercase characters!")
+      alert("You password will contain uppercase characters!")
     } else {
       alert("You don't need upper case letters");
     }
@@ -61,7 +61,7 @@ function writePassword() {
       //if userPassNumeric confirmed, add numbers to generatedPassword
       generatedPassword = generatedPassword.concat(passCondition.passNumber)
       console.log(generatedPassword)
-      alert("You need numbers!")
+      alert("Your password will contain numbers!")
     } else {
       alert("You don't need numbers");
     }
@@ -70,7 +70,7 @@ function writePassword() {
       //if userPassNumeric confirmed, add numbers to generatedPassword
       generatedPassword = generatedPassword.concat(passCondition.passSpecial)
       console.log(generatedPassword)
-      alert("You need special characters!")
+      alert("Your password will contain special characters!")
     } else {
       alert("You don't need special characters");
     }
@@ -81,10 +81,10 @@ function writePassword() {
     // Need to loop & generate random characters from the loop into
     // new variable
     for (var i = 0; i < userPassLength; i++) {
-    Math.floor(Math.random()* generatedPassword.length)
+    // Math.floor(Math.random()* generatedPassword.length)
     randomizedPassword.push(generatedPassword[[Math.floor(Math.random()* generatedPassword.length)]])
     console.log(randomizedPassword)
-    randomizedPassString = randomizedPassword.join("") 
+    randomizedPassString = randomizedPassword.join("")  //gets items from randomizedPassword and puts them into a string
     // console.log(randomizedPassString)
     }   
 
