@@ -20,14 +20,35 @@ function generatePassword() {
   var userPassNumeric = confirm("Do you need numbers?")
   var userPassSpecial =confirm("Do you need special characters?")
 
-  // var passCondition {                             //create an object with multiple arrays that we will call on to generate a password depending on preferences
-  //       var passLowerCase = ["a", "b", "c", "d", "e", "f"];
-  //       var passUpperCase = ["A", "B", "C", "D", "E", "F"];
-  //       var passNumber = ["1", "2", "3", "4", "5", "6"];
-  //       var passSpecial = ["!", "@", "#", "%", "^"];
-  //       }
+  var passCondition = {      //create an object with multiple arrays that we will call on to generate a password depending on preferences
+        passLowerCase: ["a", "b", "c", "d", "e", "f"],
+        passUpperCase: ["A", "B", "C", "D", "E", "F"],
+        passNumber: ["1", "2", "3", "4", "5", "6"],
+        passSpecial: ["!", "@", "#", "%", "^"]
+        };
 
-  
+  if (userPassLength > 0) {
+    alert("You declared a length of" + userPassLength)
+  } else {
+    alert("You need to choose a character amount between 1 and 128")
+    //call userpass length until confirm is correct
+  }
+
+  if (userPassLowerCase === true) {
+    alert("You need lowercase characters")
+  }
+
+  if (userPassUpperCase === true) {
+    alert("You need uppercase characters!")
+  }
+
+  if (userPassNumeric === true) {
+    alert("You need numbers!")
+  }
+
+  if (userPassSpecial === true) {
+    alert("You need special characters!")
+  }
 
 
 
